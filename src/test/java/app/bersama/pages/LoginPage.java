@@ -1,6 +1,7 @@
 package app.bersama.pages;
 
 import app.bersama.DriverManager;
+import app.bersama.Keyword;
 import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -62,13 +63,18 @@ public class LoginPage {
     private WebElement home_button;
 
     public void entryCredential(String PhoneNo, String Password){
+        button_Start.click();
+        input_phoneNo.();
         input_phoneNo.sendKeys(PhoneNo);
+        input_Password.click();
         input_Password.sendKeys(Password);
+        button_send.click();
     }
 
-    public void loginStep(){
+    public void loginStep(String NIK, String PocketName){
         button_Login.click();
         button_CobaCaraLain.click();
-
+        Keyword.enterText(entry_NIK, NIK);
+        Keyword.enterText(button_pocketName, PocketName);
     }
 }

@@ -28,7 +28,7 @@ public class MobileFactory {
             dc.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.ANDROID_UIAUTOMATOR2);
             dc.setCapability(MobileCapabilityType.PLATFORM_VERSION,"9");
             dc.setCapability(CapabilityType.PLATFORM_NAME, Platform.ANDROID.toString());
-            dc.setCapability(MobileCapabilityType.APP, absPathApk);
+            dc.setCapability(MobileCapabilityType.APP, "D:\\Project III\\Apk Automation Staging\\jago-stg-8.10.0 (1994).apk");
             dc.setCapability(MobileCapabilityType.DEVICE_NAME, "Redmi 7A");
             dc.setCapability(MobileCapabilityType.NO_RESET, false);
 

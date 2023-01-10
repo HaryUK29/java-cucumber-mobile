@@ -16,11 +16,11 @@ public class CommonStep {
     @When("tap login button")
     public void tapLoginButton() {
         LoginPage loginPage = new LoginPage(DriverManager.getInstance().getDriver());
-        loginPage.loginStep();
+        loginPage.loginStep("3511002904950109", "locked pocket");
     }
 
-    @Then("user should be able to login")
-    public void userShouldBeAbleToLogin() {
-
-    }
+//    @Then("user should be able to login")
+//    public void userShouldBeAbleToLogin() {
+//
+//    }
 }
