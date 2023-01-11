@@ -29,8 +29,11 @@ public class LoginPage {
     @FindBy(xpath = "//android.widget.Button[@content-desc=\"Mulai Sekarang\"]")
     private WebElement button_Start;
 
+    @FindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.widget.ImageView[2]")
+    private WebElement tap_phoneNo;
+
     @FindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.view.View/android.widget.ImageView[1]")
-    private WebElement input_phoneNo;
+    private WebElement enter_phoneNo;
 
     @FindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.view.View/android.widget.ImageView[2]")
     private WebElement input_Password;
@@ -64,8 +67,8 @@ public class LoginPage {
 
     public void entryCredential(String PhoneNo, String Password){
         button_Start.click();
-        input_phoneNo.();
-        input_phoneNo.sendKeys(PhoneNo);
+        tap_phoneNo.click();
+        enter_phoneNo.sendKeys(PhoneNo);
         input_Password.click();
         input_Password.sendKeys(Password);
         button_send.click();
