@@ -22,14 +22,14 @@ public class MobileFactory {
         DesiredCapabilities dc = new DesiredCapabilities();
 
         URL url = new URL("http://localhost:4723/wd/hub");
-        String absPathApk = System.getProperty("user.dir") + File.separator + "jago-stg-8.10.0(1994).apk";
+        String absPathApk = System.getProperty("user.dir") + File.separator + "Jago App.apk";
 
         if (platformType.equalsIgnoreCase("ANDROID")) {
             dc.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.ANDROID_UIAUTOMATOR2);
-            dc.setCapability(MobileCapabilityType.PLATFORM_VERSION,"9");
+            dc.setCapability(MobileCapabilityType.PLATFORM_VERSION,"Android 8");
             dc.setCapability(CapabilityType.PLATFORM_NAME, Platform.ANDROID.toString());
-            dc.setCapability(MobileCapabilityType.APP, "D:\\Project III\\Apk Automation Staging\\jago-stg-8.10.0 (1994).apk");
-            dc.setCapability(MobileCapabilityType.DEVICE_NAME, "Redmi 7A");
+            dc.setCapability(MobileCapabilityType.APP,"D:\\Project III\\Apk Automation Staging\\Jago App.apk.apk");
+            dc.setCapability(MobileCapabilityType.DEVICE_NAME, "Galaxy J6");
             dc.setCapability(MobileCapabilityType.NO_RESET, false);
 
         } else if (platformType.equalsIgnoreCase("IOS")) {

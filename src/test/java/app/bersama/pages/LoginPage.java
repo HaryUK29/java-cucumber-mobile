@@ -26,10 +26,10 @@ public class LoginPage {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(xpath = "//android.widget.Button[@content-desc=\"Mulai Sekarang\"]")
+    @FindBy(xpath = "//android.widget.Button[@content-desc=\"Get Started\"]")
     private WebElement button_Start;
 
-    @FindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.widget.ImageView[2]")
+    @FindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.view.View/android.widget.ImageView[2]")
     private WebElement tap_phoneNo;
 
     @FindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.view.View/android.widget.ImageView[1]")
@@ -66,12 +66,13 @@ public class LoginPage {
     private WebElement home_button;
 
     public void entryCredential(String PhoneNo, String Password){
+        Keyword.waitUntilElementIsClickAble(button_Start);
         button_Start.click();
         tap_phoneNo.click();
         enter_phoneNo.sendKeys(PhoneNo);
         input_Password.click();
         input_Password.sendKeys(Password);
-        button_send.click();
+        button_Login.click();
     }
 
     public void loginStep(String NIK, String PocketName){
